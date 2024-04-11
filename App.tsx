@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Text,View , Image , TouchableOpacity, StyleSheet,
   StatusBar
  } from 'react-native';
@@ -11,15 +11,22 @@ import Dice5 from './assets/dice5.png';
 import Dice6 from './assets/dice6.png';
 
 const App = () => {
-  const {container}= styles
-  const uri = Dice6
+  const dices = [Dice1, Dice2, Dice3,Dice4, Dice5, Dice6];
+  const [diceIndex, setDiceIndex]=useState(Dice1)
+
+  const rolDice = ()=>{
+    const randomNum = Math.floor(Math.random()*dices.length);
+    setDiceIndex(dices[randomNum])
+  }
+  
+ 
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="red" />
       <View style={styles.contentContainer}>
-        <Image source={uri}/>
+        <Image source={diceIndex}/>
         <TouchableOpacity >
-          <Text style={styles.button}>Press Here</Text>
+          <Text style={styles.button} onPress={rolDice}>Press Here</Text>
         </TouchableOpacity>
       </View>
     </View>
