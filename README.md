@@ -1,4 +1,13 @@
+
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+
+# Note
+Create a UI for rolling Dice.FIGMA
+Update the UI TO THE CODE.
+Add all the resources to the code and readMe
 
 # Getting Started
 
